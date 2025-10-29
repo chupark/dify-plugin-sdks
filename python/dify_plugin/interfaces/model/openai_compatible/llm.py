@@ -348,8 +348,8 @@ class OAICompatLargeLanguageModel(_CommonOaiApiCompat, LargeLanguageModel):
                     max=2,
                 ),
                 ParameterRule(
-                    name=get_max_token_param(),
-                    label=I18nObject(en_US="Max Tokens", zh_Hans="最大标记"),
+                    name=get_max_token_param()["name"],
+                    label=I18nObject(en_US=get_max_token_param()["label"], zh_Hans="最大标记"),
                     help=I18nObject(
                         en_US="Maximum length of tokens for the model response.",
                         zh_Hans="模型回答的tokens的最大长度。",
